@@ -1,0 +1,56 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage{multirow,booktabs}
+\usepackage[table]{xcolor}
+\usepackage{fullpage}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+\usepackage{wrapfig}
+\usepackage{setspace}
+\usepackage{calc}
+\usepackage{multicol}
+\usepackage{cancel}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[margin=3cm]{geometry}
+\usepackage{amsmath}
+\newlength{\tabcont}
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{0.05in}
+\usepackage{empheq}
+\usepackage{framed}
+\usepackage[most]{tcolorbox}
+\usepackage{xcolor}
+\colorlet{shadecolor}{orange!15}
+\parindent 0in
+\parskip 12pt
+\geometry{margin=1in, headsep=0.25in}
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+\newtheorem{reg}{Rule}
+\newtheorem{exer}{Exercise}
+\newtheorem{note}{Note}
+\begin{document}
+\title{Chapter 9 Review Notes}
+\thispagestyle{empty}
+\begin{center}
+{\LARGE \bf Homework 2}\\
+{\large Guoyuan Liu}\\
+Fall 2023, PHYS-467
+\end{center}
+
+\section{Question 2}
+Notice $P(G|\{g_i\}, \theta)$ is similar to binomial distribution with the probability of success, or the existence of an edge, as a variable. So we can write
+\begin{equation}
+    P(G|\{g_i\}, \theta) = \prod_{i\neq j}^N p_{g_i,g_j}^{A_{ij}} (1 - p_{g_i , g_j}^{A_{ij}})^ (1-A_{ij})
+\end{equation}
+and the assignment of $g_i$ is just
+\begin{equation}
+    P(\{g_i\}|\theta) = \prod_i^N n_{g_i}
+\end{equation}
+With Bayes' theorem, we have
+\begin{align}
+        P(\{g_i\}| G, \theta) = \frac{P(G|\{g_i\}, \theta) P(\{g_i\}|\theta)}{\sum_{\{g_i\}} P(G|\theta)}
+\end{align}
+\end{document}
